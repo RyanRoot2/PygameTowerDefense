@@ -1,5 +1,9 @@
+import inspect, player.character_sprite
+print(inspect.getmembers(player.character_sprite))
+
 import pygame
 import sys
+from player.characters.paladin import Paladin
 
 pygame.init()
 screen = pygame.display.set_mode((800, 600))
@@ -15,6 +19,13 @@ class Player(pygame.sprite.Sprite):
 player = Player((100, 100))
 all_sprites = pygame.sprite.Group(player)
 
+
+player2 = Paladin((0, 0))
+player2.pos = (200, 200)
+player2.sprite.update_position(player2.pos)
+player2_group = pygame.sprite.Group(player2.sprite)
+
+
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -23,6 +34,7 @@ while True:
 
     screen.fill((0, 0, 0))  # Fill the screen with black
     all_sprites.draw(screen)
+    player2_group.draw(screen)
     
 
 
