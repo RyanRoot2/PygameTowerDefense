@@ -3,6 +3,7 @@ import pygame
 class CharacterLogic:
     def __init__(self, pos):
         self.health = 100
+        self.max_health = 100
         self.mana = 50
         self._pos = pos
         self.direction = pygame.math.Vector2(0, 0)
