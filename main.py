@@ -1,9 +1,10 @@
+from settings import *
 import pygame
 import sys
 from player.characters.paladin import Paladin
 
 pygame.init()
-screen = pygame.display.set_mode((800, 600))
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Simple Pygame Window")
 
 

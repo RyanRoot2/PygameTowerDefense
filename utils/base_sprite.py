@@ -1,6 +1,6 @@
 import pygame
 
-class CharacterSprite(pygame.sprite.Sprite):
+class BaseSprite(pygame.sprite.Sprite):
     def __init__(self, pos, image_path):
         super().__init__()
         self.image = pygame.image.load(image_path).convert_alpha()
