@@ -1,8 +1,8 @@
 import pygame
 
 class BaseSprite(pygame.sprite.Sprite):
-    def __init__(self, pos, image_path):
-        super().__init__()
+    def __init__(self, pos, image_path, *groups):
+        super().__init__(*groups)
         self.image = pygame.image.load(image_path).convert_alpha()
         self.rect = self.image.get_rect(topleft=pos)
 
