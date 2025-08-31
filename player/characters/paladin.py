@@ -2,14 +2,18 @@ from utils.base_sprite import BaseSprite
 from player.character_logic import CharacterLogic
 from abilities.consecration import Consecration
 import pygame
+from settings import *
 
 class Paladin(CharacterLogic):
+    dynamic_layering = True
+    layer = ACTORS
     def __init__(self, pos, *groups):
         super().__init__(pos)
         self.holy_power = 0
-        self.sprite = BaseSprite(self.pos, "assets/paladin.png")
-        # unique paladin logic
         self.groups = groups
+        self.sprite = BaseSprite(self.pos, "assets/paladin.png", type(self).dynamic_layering, type(self).layer, *self.groups)
+        # unique paladin logic
+        
 
     def cast_consecration(self):
         consecration = Consecration(self.pos, *self.groups)
