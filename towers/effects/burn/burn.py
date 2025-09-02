@@ -1,6 +1,6 @@
 from utils.base_sprite import BaseSprite
-from player.character_logic import CharacterLogic
-from abilities.consecration import Consecration
+from towers.base_tower import CharacterLogic
+from towers.effects.burn.consecration import Consecration
 import pygame
 from settings import *
 
