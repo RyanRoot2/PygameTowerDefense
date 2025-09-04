@@ -1,5 +1,6 @@
-from utils.base_sprite import BaseSprite
 from settings import *
+from utils.base_sprite import BaseSprite
+
 
 class Consecration:
     dynamic_layering = True
@@ -8,5 +9,5 @@ class Consecration:
         self.name = "Consecration"
         self.pos = pos
         self.sprite = BaseSprite(self.pos, "assets/consecration.png", type(self).dynamic_layering, type(self).layer, *groups)
-        
+
         print(f"{self.name} cast at position {pos}")

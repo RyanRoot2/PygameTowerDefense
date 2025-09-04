@@ -1,6 +1,8 @@
-from settings import *
-import pygame
 import sys
+
+import pygame
+
+from settings import *
 from towers.effects.burn.burn import *
 
 pygame.init()
@@ -26,6 +28,6 @@ while True:
 
     screen.fill((100, 100, 100))  # Fill the screen with black
     all_sprites.draw(screen)
-    
+
     # Fill the screen with black
     pygame.display.flip()  # Update the display
