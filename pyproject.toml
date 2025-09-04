@@ -3,7 +3,8 @@ name = "Tower-Defense"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = "~=3.12"
+# Equates to min 3.12, but <3.13.
+requires-python = "~=3.12.0"
 dependencies = [
     "pygame-ce>=2.5.3",
 ]
