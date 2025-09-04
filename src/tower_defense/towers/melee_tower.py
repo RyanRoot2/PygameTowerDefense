@@ -1,10 +1,10 @@
 import pygame
 
-from utils.base_sprite import BaseSprite
+from tower_defense.utils.base_sprite import BaseSprite
 
 
 class CharacterLogic:
-    def __init__(self, pos):
+    def __init__(self, pos: pygame.math.Vector2):
         self.health = 100
         self.max_health = 100
         self.mana = 50

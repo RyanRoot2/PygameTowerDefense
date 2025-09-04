@@ -1,5 +1,5 @@
 [project]
-name = "Tower-Defense"
+name = "tower-defense"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -16,6 +16,13 @@ dev = [
     "pytest>=8.4.1",
     "ruff>=0.12.11", # Linter.
 ]
+
+[project.scripts]
+demo-cli = "tower-defense.main:main"
+
+[build-system]
+requires = ["uv_build>=0.8,<0.9"]
+build-backend = "uv_build"
 
 [tool.ruff]
 line-length = 120
@@ -58,4 +65,10 @@ ignore = [
 unfixable = [
   "SIM222", # automatic fix might obscure issue
   "SIM223", # automatic fix might obscure issue
+]
+
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
 ]

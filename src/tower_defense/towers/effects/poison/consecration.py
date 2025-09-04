@@ -1,5 +1,7 @@
-from settings import EFFECTS
-from utils.base_sprite import BaseSprite
+from pathlib import Path
+
+from tower_defense.settings import EFFECTS
+from tower_defense.utils.base_sprite import BaseSprite
 
 
 class Consecration:
@@ -10,7 +12,7 @@ class Consecration:
         self.name = "Consecration"
         self.pos = pos
         self.sprite = BaseSprite(
-            self.pos, "assets/consecration.png", type(self).dynamic_layering, type(self).layer, *groups
+            self.pos, Path("assets/consecration.png"), type(self).dynamic_layering, type(self).layer, *groups
         )
 
         print(f"{self.name} cast at position {pos}")
