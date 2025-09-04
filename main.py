@@ -2,20 +2,19 @@ import sys
 
 import pygame
 
-from settings import *
-from towers.effects.burn.burn import *
+from settings import SCREEN_HEIGHT, SCREEN_WIDTH
 
 pygame.init()
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Simple Pygame Window")
 
 groups = {
-    'background': pygame.sprite.Group(),
-    'terrain': pygame.sprite.Group(),
-    'effects': pygame.sprite.Group(),
-    'actors': pygame.sprite.Group(),
-    'projectiles': pygame.sprite.Group(),
-    'ui': pygame.sprite.Group(),
+    "background": pygame.sprite.Group(),
+    "terrain": pygame.sprite.Group(),
+    "effects": pygame.sprite.Group(),
+    "actors": pygame.sprite.Group(),
+    "projectiles": pygame.sprite.Group(),
+    "ui": pygame.sprite.Group(),
 }
 all_sprites = pygame.sprite.LayeredUpdates()
 

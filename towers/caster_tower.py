@@ -1,5 +1,7 @@
 import pygame
 
+from utils.base_sprite import BaseSprite
+
 
 class CharacterLogic:
     def __init__(self, pos):
@@ -9,6 +11,7 @@ class CharacterLogic:
         self._pos = pos
         self.direction = pygame.math.Vector2(0, 0)
         # other shared logic attributes
+        self.sprite: BaseSprite
 
     @property
     def pos(self):
