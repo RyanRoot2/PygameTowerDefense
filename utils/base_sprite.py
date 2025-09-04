@@ -1,5 +1,7 @@
 import pygame
+
 from settings import *
+
 
 class BaseSprite(pygame.sprite.Sprite):
     def __init__(self, pos, image_path, dynamic_layering=False, layer=BACKGROUND, *groups):

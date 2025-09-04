@@ -1,5 +1,6 @@
 import pygame
 
+
 class CharacterLogic:
     def __init__(self, pos):
         self.health = 100
@@ -20,7 +21,7 @@ class CharacterLogic:
             self.sprite.update_position(value)
 
     # Character movement logic
-   
+
     def input(self):
         keys = pygame.key.get_pressed()
         input_vector = pygame.math.Vector2(0, 0)
@@ -33,11 +34,11 @@ class CharacterLogic:
         if keys[pygame.K_f]:
             input_vector.x += 1
         self.direction = input_vector
-    
+
     def move(self):
         speed = 2  # pixels per second
         self.pos += self.direction * speed
-    
+
     def update(self):
         self.input()
         self.move()

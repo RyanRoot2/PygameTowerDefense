@@ -1,5 +1,6 @@
 import pygame
 
+
 class HealthBar:
     def __init__(self, width, height, color, attached_object=None, border=False, pos=None):
         self.width = width
@@ -15,7 +16,7 @@ class HealthBar:
             self.pos = (x, y - 20)
         elif not self.pos:
             raise ValueError("HealthBar requires either an attached_object with a sprite or a fixed pos.")
-    
+
     def draw(self, surface, health, max_health):
         health_ratio = health / max_health
         remaining_health_width = (self.width * health_ratio)

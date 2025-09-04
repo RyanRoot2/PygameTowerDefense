@@ -1,4 +1,3 @@
-import pygame
 
 # Define screen dimensions
 SCREEN_WIDTH = 1920

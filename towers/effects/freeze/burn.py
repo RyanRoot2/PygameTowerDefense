@@ -1,8 +1,10 @@
-from utils.base_sprite import BaseSprite
-from towers.base_tower import CharacterLogic
-from burn.consecration import Consecration
 import pygame
+from burn.consecration import Consecration
+
 from settings import *
+from towers.base_tower import CharacterLogic
+from utils.base_sprite import BaseSprite
+
 
 class Paladin(CharacterLogic):
     dynamic_layering = True
@@ -13,7 +15,7 @@ class Paladin(CharacterLogic):
         self.groups = groups
         self.sprite = BaseSprite(self.pos, "assets/paladin.png", type(self).dynamic_layering, type(self).layer, *self.groups)
         # unique paladin logic
-        
+
 
     def cast_consecration(self):
         consecration = Consecration(self.pos, *self.groups)
